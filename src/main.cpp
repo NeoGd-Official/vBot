@@ -4,7 +4,7 @@
 
 using namespace geode::prelude;
 
-class VBotPopup : public geode::Popup<> {
+class VBotPopup : public geode::Popup {
 protected:
     bool init() {
         if (!Popup::init(280.f, 180.f))
@@ -88,7 +88,6 @@ public:
     }
 };
 
-
 class $modify(VBotMenuLayer, MenuLayer) {
     bool init() {
         if (!MenuLayer::init())
@@ -103,7 +102,6 @@ class $modify(VBotMenuLayer, MenuLayer) {
             winSize.height - 45.f
         );
 
-        // Your custom vBot icon
         auto icon = CCSprite::create(
             "vbot-button.png"_spr
         );
@@ -113,7 +111,6 @@ class $modify(VBotMenuLayer, MenuLayer) {
             return true;
         }
 
-        // Keep the icon a reasonable size
         icon->setScale(0.18f);
 
         auto button = CCMenuItemSpriteExtra::create(
@@ -135,7 +132,6 @@ class $modify(VBotMenuLayer, MenuLayer) {
             popup->show();
     }
 };
-
 
 $on_mod(Loaded) {
     log::info("vBot loaded successfully!");
