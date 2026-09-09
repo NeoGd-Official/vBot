@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
+        config:
           - name: Windows
             os: windows-latest
             target: Win64
@@ -22,7 +22,7 @@ jobs:
             os: ubuntu-latest
             target: Android64
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.config.os }}
 
     steps:
       - name: Checkout
@@ -31,9 +31,8 @@ jobs:
       - name: Build vBot
         uses: geode-sdk/build-geode-mod@main
         with:
-          sdk: given
-          target: ${{ matrix.target }}
           combine: true
+          target: ${{ matrix.config.target }}
 
   package:
     name: Package vBot
@@ -45,7 +44,7 @@ jobs:
         uses: geode-sdk/build-geode-mod/combine@main
         id: build
 
-      - name: Upload vBot
+      - name: Upload combined .geode
         uses: actions/upload-artifact@v4
         with:
           name: vBot
