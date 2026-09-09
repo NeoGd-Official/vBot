@@ -4,7 +4,7 @@
         "win": "2.2081",
         "android": "2.2081"
     },
-    "id": "NeoGd.vBot",
+    "id": "neogd.vbot",
     "name": "vBot",
     "version": "v1.0.0",
     "developer": "Neo_",
@@ -13,5 +13,10 @@
         "homepage": "https://github.com/NeoGd-Official/vBot",
         "source": "https://github.com/NeoGd-Official/vBot",
         "community": "https://discord.gg/cEe88bSw3q"
+    },
+    "resources": {
+        "sprites": [
+            "resources/vbot-button.png"
+        ]
     }
 }
