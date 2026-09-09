@@ -1,6 +1,6 @@
 # vBot
 
-A Geometry Dash bot mod made by Neo_ using ["Geode"](https://geode-sdk.org/).
+A Geometry Dash bot mod made by Neo_ using [Geode](https://geode-sdk.org/).
 
 # Features
 
