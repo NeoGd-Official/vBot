@@ -1,0 +1,48 @@
+# Dependencies
+*.d
+
+# Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# macOS
+**/.DS_Store
+
+# Build folders
+**/build
+build-*/
+cmake-build-*/
+
+# VS Code
+**/.vscode
+.history/
+.cache/
+
+# Visual Studio
+.vs/
+
+# CLion
+.idea/
+
+# clangd
+.cache/
